@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container flex">
+        <div class="cards to-do flex">
+          <div class="header flex">
+            <h1>To do</h1>
+            <div class="todo-num" id="todo">0</div>
+          </div>
+          <div class="cardcontainer flex"></div>
+          <button class="add-btn flex">
+            <p>+</p>
+            <p>Add card</p>
+          </button>
+        </div>
+        <div class="cards in-progress flex">
+          <div class="header flex">
+            <h1>In-progress</h1>
+            <div class="todo-num" id="inprogress">0</div>
+          </div>
+          <div class="cardcontainer flex"></div>
+          <button class="add-btn flex">
+            <p>+</p>
+            <p>Add card</p>
+          </button>
+        </div>
+        <div class="cards stuck flex">
+          <div class="header flex">
+            <h1>Stuck</h1>
+            <div class="todo-num" id="stuck">0</div>
+          </div>
+          <div class="cardcontainer flex"></div>
+          <button class="add-btn flex">
+            <p>+</p>
+            <p>Add card</p>
+          </button>
+        </div>
+        <div class="cards done flex">
+          <div class="header flex">
+            <h1>Done</h1>
+            <div class="todo-num" id="done">0</div>
+          </div>
+          <div class="cardcontainer flex"></div>
+          <button class="add-btn flex">
+            <p>+</p>
+            <p>Add card</p>
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="modal flex radius">
+      <div class="card-header flex">
+        <h1>Add Task</h1>
+        <button class="close-btn btn">X</button>
+      </div>
+      <div class="title">
+        <p>Title</p>
+        <input class="input-title" type="text" id="input" placeholder="works" />
+      </div>
+      <div class="description">
+        <p>Description</p>
+        <textarea
+          name=""
+          id="desc"
+          cols="30"
+          rows="10"
+          placeholder="your opinion"
+        ></textarea>
+      </div>
+      <div class="status">
+        <p>Status</p>
+        <select name="status" id="status">
+          <option value="todo">To do</option>
+          <option value="inprogress">In progress</option>
+          <option value="stuck">Stuck</option>
+          <option value="done">Done</option>
+        </select>
+      </div>
+      <div class="priorities">
+        <p>Priority</p>
+        <select name="priority" id="priority">
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+      <button class="task radius" onclick="addCard(false)">Add Task</button>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
